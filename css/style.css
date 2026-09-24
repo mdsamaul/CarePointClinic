@@ -270,4 +270,137 @@ h1 {
     padding: 72px 0 80px;
   }
 }
+
+.back-link {
+  color: var(--teal);
+  font-weight: bold;
+}
+
+.appointment-main {
+  padding-bottom: 96px;
+  padding-top: 72px;
+}
+
+.form-introduction {
+  margin-bottom: 36px;
+  max-width: 650px;
+}
+
+.form-introduction h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin-bottom: 16px;
+}
+
+.form-introduction > p:last-child {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.appointment-form {
+  background: var(--white);
+  border: 1px solid var(--border);
+  margin: 0 auto;
+  max-width: 820px;
+  padding: 36px;
+}
+
+.form-row {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.form-field {
+  margin-bottom: 22px;
+}
+
+.form-field label,
+.form-field legend {
+  color: var(--navy);
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-field input:not([type="radio"]):not([type="checkbox"]),
+.form-field select,
+.form-field textarea {
+  border: 1px solid #b9cfca;
+  border-radius: 0;
+  color: var(--text);
+  font: inherit;
+  padding: 11px 12px;
+  width: 100%;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+fieldset {
+  border: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.radio-field {
+  margin-bottom: 22px;
+}
+
+.radio-field label {
+  display: inline-block;
+  font-weight: normal;
+  margin-right: 18px;
+}
+
+.checkbox-field {
+  color: var(--text);
+  display: block;
+  margin: 4px 0;
+}
+
+.checkbox-field input {
+  margin-right: 8px;
+}
+
+.error-message {
+  color: #b42318;
+  display: block;
+  min-height: 22px;
+  padding-top: 4px;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.reset-button {
+  background: var(--white);
+  border: 1px solid var(--navy);
+  color: var(--navy);
+  cursor: pointer;
+  font: inherit;
+}
+
+.success-message {
+  color: #146c43;
+  font-weight: bold;
+  margin-top: 24px;
+}
+
+@media (max-width: 760px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .appointment-form {
+    padding: 24px;
+  }
+}
 }

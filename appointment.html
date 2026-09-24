@@ -7,9 +7,109 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main>
-    <h1>Book an Appointment</h1>
-    <a href="index.html">Return to home</a>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html">CarePoint Clinic</a>
+      <a class="back-link" href="index.html">Return to home</a>
+    </nav>
+  </header>
+
+  <main class="appointment-main container">
+    <div class="form-introduction">
+      <p class="eyebrow">Appointment booking</p>
+      <h1>Tell us how we can help.</h1>
+      <p>Complete the form below and our clinic team will review your appointment request.</p>
+    </div>
+
+    <form class="appointment-form" id="appointment-form" novalidate>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="patient-name">Patient name</label>
+          <input id="patient-name" name="patientName" type="text" required>
+          <small class="error-message" id="patient-name-error"></small>
+        </div>
+        <div class="form-field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" required>
+          <small class="error-message" id="email-error"></small>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="phone">Phone number</label>
+          <input id="phone" name="phone" type="tel" placeholder="01XXXXXXXXX" required>
+          <small class="error-message" id="phone-error"></small>
+        </div>
+        <div class="form-field">
+          <label for="appointment-date">Preferred date</label>
+          <input id="appointment-date" name="appointmentDate" type="date" required>
+          <small class="error-message" id="appointment-date-error"></small>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="doctor">Choose a doctor</label>
+          <select id="doctor" name="doctor" required>
+            <option value="">Select a doctor</option>
+            <option value="Dr. Samira Rahman">Dr. Samira Rahman</option>
+            <option value="Dr. Arif Hasan">Dr. Arif Hasan</option>
+            <option value="Dr. Nadia Karim">Dr. Nadia Karim</option>
+          </select>
+          <small class="error-message" id="doctor-error"></small>
+        </div>
+        <div class="form-field">
+          <label for="appointment-type">Appointment type</label>
+          <select id="appointment-type" name="appointmentType" required>
+            <option value="">Select a service</option>
+            <option value="General Consultation">General Consultation</option>
+            <option value="Dental Care">Dental Care</option>
+            <option value="Specialist Consultation">Specialist Consultation</option>
+          </select>
+          <small class="error-message" id="appointment-type-error"></small>
+        </div>
+      </div>
+
+      <fieldset class="form-field radio-field">
+        <legend>Gender</legend>
+        <label><input type="radio" name="gender" value="Female" required> Female</label>
+        <label><input type="radio" name="gender" value="Male"> Male</label>
+        <label><input type="radio" name="gender" value="Other"> Other</label>
+        <small class="error-message" id="gender-error"></small>
+      </fieldset>
+
+      <div class="form-field">
+        <label for="reason">Reason for visit</label>
+        <textarea id="reason" name="reason" rows="4" required></textarea>
+        <small class="error-message" id="reason-error"></small>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="password">Create a booking password</label>
+          <input id="password" name="password" type="password" required>
+          <small class="error-message" id="password-error"></small>
+        </div>
+        <div class="form-field">
+          <label for="confirm-password">Confirm password</label>
+          <input id="confirm-password" name="confirmPassword" type="password" required>
+          <small class="error-message" id="confirm-password-error"></small>
+        </div>
+      </div>
+
+      <label class="checkbox-field" for="terms">
+        <input id="terms" name="terms" type="checkbox" required>
+        I agree to the clinic appointment terms.
+      </label>
+      <small class="error-message" id="terms-error"></small>
+
+      <div class="form-actions">
+        <button class="button primary-button" type="submit">Submit Appointment</button>
+        <button class="button reset-button" type="reset">Reset Form</button>
+      </div>
+      <div class="success-message" id="success-message" role="status"></div>
+    </form>
   </main>
   <script src="js/script.js"></script>
 </body>
