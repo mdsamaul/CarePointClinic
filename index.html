@@ -7,9 +7,82 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html">CarePoint Clinic</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">Menu</button>
+      <div class="nav-links" id="main-menu">
+        <a class="active" href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-button" href="appointment.html">Book Appointment</a>
+      </div>
+    </nav>
+  </header>
+
   <main>
-    <h1>Clinic Appointment Booking System</h1>
+    <section class="hero" id="about">
+      <div class="container hero-content">
+        <p class="eyebrow">Trusted care, close to home</p>
+        <h1>Health care that puts you first.</h1>
+        <p class="hero-description">Book a convenient appointment with our caring medical team and take the next step toward feeling your best.</p>
+        <div class="hero-actions">
+          <a class="button primary-button" href="appointment.html">Book Now</a>
+          <a class="button secondary-button" href="#services">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section container" id="services">
+      <div class="section-heading">
+        <p class="eyebrow">Our services</p>
+        <h2>Care for every stage of life</h2>
+        <p>Our friendly professionals provide focused care in a comfortable environment.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">GP</div>
+          <h3>General Consultation</h3>
+          <p>Get advice, check-ups, and treatment plans for your everyday health needs.</p>
+          <a class="text-link" href="appointment.html">Book this service</a>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">DC</div>
+          <h3>Dental Care</h3>
+          <p>Keep your smile healthy with preventive dental care and professional guidance.</p>
+          <a class="text-link" href="appointment.html">Book this service</a>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">SC</div>
+          <h3>Specialist Consultation</h3>
+          <p>Speak with experienced specialists for focused advice and ongoing support.</p>
+          <a class="text-link" href="appointment.html">Book this service</a>
+        </article>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-content">
+      <div>
+        <h2>CarePoint Clinic</h2>
+        <p>Simple, dependable care for your whole family.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>12 Lake View Road, Dhaka<br>Phone: +880 1712-345678<br>Email: hello@carepoint.example</p>
+      </div>
+      <div>
+        <h3>Follow us</h3>
+        <div class="social-links">
+          <a href="#contact">Facebook</a>
+          <a href="#contact">Instagram</a>
+          <a href="#contact">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="js/script.js"></script>
 </body>
 </html>

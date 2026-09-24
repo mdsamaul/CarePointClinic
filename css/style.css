@@ -1,5 +1,273 @@
-/* Shared styles for the clinic pages. */
+:root {
+  --navy: #123047;
+  --teal: #16847b;
+  --light-teal: #e8f5f2;
+  --cream: #f7faf8;
+  --text: #24343d;
+  --muted: #5f7078;
+  --white: #ffffff;
+  --border: #d8e5e2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1120px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 76px;
+}
+
+.brand {
+  color: var(--navy);
+  font-size: 1.35rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  align-items: center;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--teal);
+}
+
+.nav-links .nav-button {
+  background: var(--teal);
+  color: var(--white);
+  padding: 10px 16px;
+}
+
+.menu-toggle {
+  background: var(--white);
+  border: 1px solid var(--border);
+  color: var(--navy);
+  cursor: pointer;
+  display: none;
+  padding: 8px 12px;
+}
+
+.hero {
+  background: linear-gradient(115deg, var(--light-teal), #f7f1e8);
+  padding: 96px 0 104px;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: var(--teal);
+  font-size: 0.78rem;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  color: var(--navy);
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  line-height: 1.05;
+  margin-bottom: 22px;
+  max-width: 680px;
+}
+
+.hero-description {
+  color: var(--muted);
+  font-size: 1.15rem;
+  max-width: 560px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.button {
+  display: inline-block;
+  font-weight: bold;
+  padding: 13px 22px;
+}
+
+.primary-button {
+  background: var(--teal);
+  color: var(--white);
+}
+
+.secondary-button {
+  border: 1px solid var(--navy);
+  color: var(--navy);
+}
+
+.services-section {
+  padding-bottom: 100px;
+  padding-top: 88px;
+}
+
+.section-heading {
+  margin-bottom: 36px;
+  max-width: 600px;
+}
+
+.section-heading h2 {
+  color: var(--navy);
+  font-size: 2.3rem;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.section-heading p:last-child,
+.service-card p,
+.site-footer p {
+  color: var(--muted);
+}
+
+.service-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.service-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 28px;
+}
+
+.service-icon {
+  align-items: center;
+  background: var(--light-teal);
+  color: var(--teal);
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: bold;
+  height: 48px;
+  justify-content: center;
+  margin-bottom: 24px;
+  width: 48px;
+}
+
+.service-card h3 {
+  color: var(--navy);
+  font-size: 1.25rem;
+}
+
+.text-link {
+  color: var(--teal);
+  font-weight: bold;
+}
+
+.site-footer {
+  background: var(--navy);
+  color: var(--white);
+  padding: 52px 0;
+}
+
+.footer-content {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1.5fr 1fr 1fr;
+}
+
+.site-footer h2,
+.site-footer h3 {
+  margin-bottom: 10px;
+}
+
+.site-footer p {
+  color: #c4d3d5;
+  margin-bottom: 0;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.social-links a {
+  color: #c4d3d5;
+}
+
+@media (max-width: 760px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    left: 0;
+    padding: 20px 24px;
+    position: absolute;
+    right: 0;
+    top: 76px;
+    z-index: 2;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .service-grid,
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 72px 0 80px;
+  }
+}
 }
