@@ -27,6 +27,8 @@ if (appointmentForm) {
 	appointmentForm.addEventListener('submit', function (event) {
 		event.preventDefault();
 		clearErrors();
+		const successMessage = document.getElementById('success-message');
+		successMessage.textContent = '';
 
 		let isValid = true;
 		const patientName = document.getElementById('patient-name');
@@ -104,12 +106,14 @@ if (appointmentForm) {
 
 		if (isValid) {
 			appointmentForm.dataset.valid = 'true';
+			successMessage.textContent = 'Appointment request submitted successfully for ' + patientName.value.trim() + ' on ' + appointmentDate.value + '.';
 		}
 	});
 
 	appointmentForm.addEventListener('reset', function () {
 		window.setTimeout(function () {
 			clearErrors();
+			document.getElementById('success-message').textContent = '';
 			appointmentForm.dataset.valid = 'false';
 		}, 0);
 	});
